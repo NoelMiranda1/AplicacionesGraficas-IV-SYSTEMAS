@@ -1,7 +1,7 @@
 /** @format */
 
 import { useState } from "react";
-import { Header } from "../components/header/Header";
+import { Header } from "../components/header/header.component";
 
 export const HomePage = () => {
   const [data, setData] = useState<any>(null);

@@ -22,7 +22,7 @@ export const Header = (props: props) => {
     async function fetchData() {
       const data = await api.getMovie(nameSearch);
       setData(data.Search);
-      setNameSearch("");
+      // setNameSearch("");
     }
     fetchData();
   }, [nameSearch]);

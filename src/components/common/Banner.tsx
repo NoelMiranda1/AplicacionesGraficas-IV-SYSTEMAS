@@ -1,6 +1,10 @@
 /** @format */
 import Slider from "react-slick";
-export const card = () => {
+interface props {
+  data: any;
+}
+export const card = (props: props) => {
+  const { data } = props;
   const settings = {
     dots: true,
     infinite: true,
@@ -10,7 +14,11 @@ export const card = () => {
   };
   return (
     <div>
-      <Slider {...settings}></Slider>
+      <Slider {...settings}>
+        <div>
+          <p>{}</p>
+        </div>
+      </Slider>
     </div>
   );
 };

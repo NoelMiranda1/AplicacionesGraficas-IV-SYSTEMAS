@@ -1,18 +1,19 @@
 /** @format */
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Home } from "../pages/Home.tsx";
-import { MovieDetails } from "../pages/MovieDetails.tsx";
-export const Routers = () => {
+import { HomePage } from "../pages/home.page";
+import { MoviePage } from "../pages/movie.page";
+
+export const Routes = () => {
   return (
     <>
       <Router>
         <Switch>
-          <Route path='MovieDetails'>
-            <MovieDetails />
+          <Route path='/movie'>
+            <MoviePage />
           </Route>
           <Route path='/'>
-            <Home />
+            <HomePage />
           </Route>
         </Switch>
       </Router>

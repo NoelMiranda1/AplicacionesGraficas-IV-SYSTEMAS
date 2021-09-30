@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Header } from "../components/header/Header";
 
-export const Home = () => {
+export const HomePage = () => {
   const [data, setData] = useState<any>(null);
   console.log("data", data);
   return (

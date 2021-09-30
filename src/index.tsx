@@ -2,12 +2,12 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import { Routers } from "./router/Router";
 import "./scss/index.scss";
 
 ReactDOM.render(
   <>
-    <App />
+    <Routers />
   </>,
   document.getElementById("root")
 );

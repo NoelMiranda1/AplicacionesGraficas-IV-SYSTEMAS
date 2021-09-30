@@ -2,6 +2,6 @@
 
 import React from "react";
 
-export const Home = () => {
+export const card = () => {
   return <div>Hola</div>;
 };

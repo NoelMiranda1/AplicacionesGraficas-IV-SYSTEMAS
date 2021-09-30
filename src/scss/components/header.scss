@@ -1,0 +1,33 @@
+/** @format */
+
+.navBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #182131;
+  z-index: $z-fixed;
+}
+
+.navOptions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-item {
+    margin-left: 20px;
+  }
+  &-a {
+    color: #fff !important;
+    padding: 10px 10px;
+    border-radius: 20px;
+    &:active {
+      color: #fff !important;
+      background-color: #fff;
+    }
+  }
+}

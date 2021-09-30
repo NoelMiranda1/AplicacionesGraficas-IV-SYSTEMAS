@@ -16,16 +16,33 @@ const api = new API();
 
 export const Header = (props: props) => {
   const { setData } = props;
-  const [nameSearch, setNameSearch] = useState<string>("batman");
+  const [nameSearch, setNameSearch] = useState<string>("");
   const [errors, setErrors] = useState<string>("");
   async function fetchData() {
     const data = await api.getMovie(nameSearch);
-    setData(data.Search);
-    setNameSearch("");
-    setErrors("");
+    console.log("dataHeader Submit", data);
+    if (data.Response !== false) {
+      setData(data.Search);
+      setNameSearch("");
+      setErrors("");
+    } else {
+      setErrors(data.Error);
+    }
+  }
+  async function defaultMovie() {
+    const data = await api.getDefaultMovie();
+    console.log("dataHeader", data);
+    if (data.Response !== false) {
+      setData(data);
+      setNameSearch("");
+      setErrors("");
+    } else {
+      setErrors(data.Error);
+    }
   }
   useEffect(() => {
-    fetchData();
+    defaultMovie();
+    // fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

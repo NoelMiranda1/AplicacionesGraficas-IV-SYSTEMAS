@@ -1,6 +1,6 @@
 /** @format */
 import Slider from "react-slick";
-export const card = () => {
+export const Card = () => {
   const settings = {
     dots: true,
     infinite: true,

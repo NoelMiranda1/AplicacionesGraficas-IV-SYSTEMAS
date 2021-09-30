@@ -17,18 +17,25 @@ const api = new API();
 export const Header = (props: props) => {
   const { setData } = props;
   const [nameSearch, setNameSearch] = useState<string>("batman");
-
+  const [errors, setErrors] = useState<string>("");
+  async function fetchData() {
+    const data = await api.getMovie(nameSearch);
+    setData(data.Search);
+    setNameSearch("");
+    setErrors("");
+  }
   useEffect(() => {
-    async function fetchData() {
-      const data = await api.getMovie(nameSearch);
-      setData(data.Search);
-      // setNameSearch("");
-    }
     fetchData();
-  }, [nameSearch]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const SearchMovie = (e: any) => {
     e.preventDefault();
+    if (!nameSearch) {
+      return setErrors("La busqueda no puede ser vacia");
+    } else {
+      fetchData();
+    }
   };
 
   return (
@@ -51,6 +58,9 @@ export const Header = (props: props) => {
             onChange={(e) => setNameSearch(e.target.value)}
             autoFocus
           />
+          {errors !== "" ? (
+            <p className='errorText'>{errors !== "" ? errors : null}</p>
+          ) : null}
         </form>
       </div>
       <div>

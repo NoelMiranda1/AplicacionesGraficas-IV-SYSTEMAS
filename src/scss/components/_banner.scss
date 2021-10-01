@@ -16,3 +16,29 @@
 //     background-color: #fff;
 //   }
 // }
+// No agarraba los estilos xd
+.banner1 {
+  width: "100%";
+  height: "400px";
+  padding: "30px";
+  border-radius: "20px";
+}
+.icon1 {
+  width: "100%";
+  height: "400px";
+  display: "flex";
+  justify-content: "center";
+  align-items: "center";
+}
+.titleMovie {
+  position: absolute;
+  color: #fff;
+  top: 280px;
+  margin-left: 150px;
+}
+.titles {
+  max-width: 150px;
+}
+.radius {
+  border-radius: 20px 20px 20px 20px !important;
+}

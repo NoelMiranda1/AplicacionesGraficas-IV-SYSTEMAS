@@ -16,22 +16,26 @@ const api = new API();
 
 export const Header = (props: props) => {
   const { setData } = props;
-  const [nameSearch, setNameSearch] = useState<string>("Marvel");
+  const [nameSearch, setNameSearch] = useState<string>("");
   const [errors, setErrors] = useState<string>("");
+
   async function fetchData() {
     const data = await api.getMovie(nameSearch);
     // console.log("dataHeader Submit", data);
-    if (data.Response !== false) {
-      setData(data.Search);
-      setNameSearch("");
-      setErrors("");
-    } else {
-      setErrors(data.Error);
-    }
+    setData(data.results);
+    setNameSearch("");
+    setErrors("");
+  }
+  async function defaultMovie() {
+    const data = await api.getDefaultMovie();
+    // console.log("dataHeader Default", data);
+    setData(data.results);
+    setNameSearch("");
+    setErrors("");
   }
   useEffect(() => {
-    // defaultMovie();
-    fetchData();
+    defaultMovie();
+    // fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -58,6 +62,7 @@ export const Header = (props: props) => {
       <div>
         <form onSubmit={(e) => SearchMovie(e)}>
           <input
+            className='inputSearch'
             type='text'
             placeholder='Search'
             value={nameSearch}

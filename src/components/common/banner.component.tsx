@@ -2,6 +2,9 @@
 import Slider from "react-slick";
 import { BsDashCircleFill } from "react-icons/bs";
 // import Pic from "../../assets/images/images.png";
+import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 interface props {
   data: any;
 }
@@ -51,31 +54,47 @@ export const Banner = (props: props) => {
     ]
   };
   // const { backdrop_path, title, release_date, poster_path } = data;
-  console.log("data", data);
+  // console.log("data", data);
   // data
+  const result = data.filter((movie: any) => movie?.backdrop_path !== null);
   return (
     <div style={{ paddingLeft: "50px", paddingRight: "50px" }}>
       <Slider {...settings}>
-        {data?.map((movie: any) => {
+        {result?.map((movie: any) => {
           console.log(" movie?.backdrop_path", movie?.backdrop_path);
           const urlPhotoFirst =
             movie?.backdrop_path !== null ? movie?.backdrop_path : null;
           // const bannerUrl = urlPhotoFirst ? urlPhotoFirst
           return (
-            <div>
+            <Link
+              key={`${movie?.title}+${movie?.id}`}
+              to={`/movie/${movie?.id}`}>
               {urlPhotoFirst ? (
                 <div className='radius' style={{ borderRadius: "20px" }}>
-                  <img
+                  <LazyLoadImage
+                    alt={movie?.title}
+                    style={{
+                      width: "100%",
+                      height: "500px",
+                      padding: "30px",
+                      marginRight: "100px"
+                    }}
+                    key={`${movie?.title}+${movie?.id}`}
+                    delayTime={300}
+                    src={`https://image.tmdb.org/t/p/w1280/${urlPhotoFirst}`}
+                  />
+                  {/* <img
                     className='radius'
                     style={{
                       width: "100%",
-                      height: "400px",
-                      padding: "30px"
+                      height: "500px",
+                      padding: "30px",
+                      marginRight: "100px"
                     }}
                     key={`${movie?.title}+${movie?.id}`}
                     src={`https://image.tmdb.org/t/p/w1280/${urlPhotoFirst}`}
                     alt={movie?.title}
-                  />
+                  /> */}
                 </div>
               ) : (
                 <div
@@ -92,7 +111,7 @@ export const Banner = (props: props) => {
               <div className='titles'>
                 <h1 className='titleMovie'>{movie?.title}</h1>
               </div>
-            </div>
+            </Link>
           );
         })}
       </Slider>

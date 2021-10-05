@@ -11,14 +11,9 @@ import { Card } from "../components/common/card.component";
 import API from "../utils/api";
 const api = new API();
 
-export const HomePage = () => {
-  const [data, setData] = useState<any>([]);
-  // console.log("data Home", data);
+export const HomePage = ({ data }: any) => {
   const [dcFilter, setDcFilter] = useState([]);
   const [marvelFilter, setMarvelFilter] = useState([]);
-  const getData = (data: any) => {
-    setData(data);
-  };
 
   async function fetchDC() {
     const data = await api.getMovie("DC");
@@ -36,7 +31,6 @@ export const HomePage = () => {
 
   return (
     <div>
-      <Header setData={getData} />
       <div style={{ marginTop: "7%" }}>
         {data !== [] ? <Banner data={data} /> : null}
         <div style={{ marginLeft: "5%", marginRight: "5%" }}>

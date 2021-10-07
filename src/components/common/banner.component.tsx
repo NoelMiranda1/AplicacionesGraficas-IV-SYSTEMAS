@@ -1,31 +1,22 @@
 /** @format */
 import Slider from "react-slick";
 import { BsDashCircleFill } from "react-icons/bs";
-// import Pic from "../../assets/images/images.png";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
+import { Alert } from "reactstrap";
 interface props {
   data: any;
 }
 export const Banner = (props: props) => {
   const { data } = props;
-  // const SlickArrowLeft = ({ currentSlide, slideCount, ...props }: any) => (
-  //   <AiOutlineArrowLeft color='#000' size={70} alt='prevArrow' {...props} />
-  // );
 
-  // const SlickArrowRight = ({ currentSlide, slideCount, ...props }: any) => (
-  //   <AiOutlineArrowRight color='#000' size={70} alt='nextArrow' {...props} />
-  // );
   const settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
-    // prevArrow: <SlickArrowLeft />,
-    // nextArrow: <SlickArrowRight />
     responsive: [
       {
         breakpoint: 1024,
@@ -53,18 +44,18 @@ export const Banner = (props: props) => {
       }
     ]
   };
-  // const { backdrop_path, title, release_date, poster_path } = data;
-  // console.log("data", data);
-  // data
   const result = data.filter((movie: any) => movie?.backdrop_path !== null);
+  console.log("result", result);
+
   return (
-    <div style={{ paddingLeft: "50px", paddingRight: "50px" }}>
+    <div style={{ paddingLeft: "30px", paddingRight: "30px" }}>
       <Slider {...settings}>
+        {result.length === 0 ? (
+          <Alert color='danger'>No se ha encontrado resultados</Alert>
+        ) : null}
         {result?.map((movie: any) => {
-          console.log(" movie?.backdrop_path", movie?.backdrop_path);
           const urlPhotoFirst =
             movie?.backdrop_path !== null ? movie?.backdrop_path : null;
-          // const bannerUrl = urlPhotoFirst ? urlPhotoFirst
           return (
             <Link
               key={`${movie?.title}+${movie?.id}`}
@@ -83,18 +74,6 @@ export const Banner = (props: props) => {
                     delayTime={300}
                     src={`https://image.tmdb.org/t/p/w1280/${urlPhotoFirst}`}
                   />
-                  {/* <img
-                    className='radius'
-                    style={{
-                      width: "100%",
-                      height: "500px",
-                      padding: "30px",
-                      marginRight: "100px"
-                    }}
-                    key={`${movie?.title}+${movie?.id}`}
-                    src={`https://image.tmdb.org/t/p/w1280/${urlPhotoFirst}`}
-                    alt={movie?.title}
-                  /> */}
                 </div>
               ) : (
                 <div

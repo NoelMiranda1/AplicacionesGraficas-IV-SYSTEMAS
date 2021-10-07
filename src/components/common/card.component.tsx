@@ -3,19 +3,12 @@ import Slider from "react-slick";
 import { BsDashCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-// import Pic from "../../assets/images/images.png";
 interface props {
   data: any;
 }
 export const Card = (props: props) => {
   const { data } = props;
-  // const SlickArrowLeft = ({ currentSlide, slideCount, ...props }: any) => (
-  //   <AiOutlineArrowLeft color='#000' size={70} alt='prevArrow' {...props} />
-  // );
 
-  // const SlickArrowRight = ({ currentSlide, slideCount, ...props }: any) => (
-  //   <AiOutlineArrowRight color='#000' size={70} alt='nextArrow' {...props} />
-  // );
   const settings = {
     dots: true,
     infinite: true,
@@ -23,8 +16,6 @@ export const Card = (props: props) => {
     slidesToShow: 6,
     slidesToScroll: 6,
     initialSlide: 0,
-    // prevArrow: <SlickArrowLeft />,
-    // nextArrow: <SlickArrowRight />
     responsive: [
       {
         breakpoint: 1050,
@@ -60,8 +51,6 @@ export const Card = (props: props) => {
       }
     ]
   };
-  // const { backdrop_path, title, release_date, poster_path } = data;
-  console.log("data", data);
   const result = data.filter((movie: any) => movie?.poster_path !== null);
 
   return (
@@ -84,17 +73,6 @@ export const Card = (props: props) => {
                     delayTime={300}
                     src={`https://image.tmdb.org/t/p/w1280/${movie?.poster_path}`}
                   />
-                  {/* <img
-                    className='radius'
-                    style={{
-                      width: "100%",
-                      height: "350px",
-                      padding: "30px"
-                    }}
-                    key={`${movie?.title}+${movie?.id}`}
-                    src={`https://image.tmdb.org/t/p/w1280/${movie?.poster_path}`}
-                    alt={movie?.title}
-                  /> */}
                 </div>
               ) : (
                 <div

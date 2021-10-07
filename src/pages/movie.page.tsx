@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { Card } from "../components/common/card.component";
 import IMG from "../assets/images/ban.png";
 import API from "../utils/api";
+import { Comment } from "../components/common/comment.componet";
 
 const api = new API();
 
@@ -23,7 +24,6 @@ export const MoviePage = () => {
   }
   async function getAlternativeMovie() {
     const response = await api.getAlternativeMovie(params?.id);
-    console.log("response", response);
     if (response.success === false) {
       setErrors(response?.status_message);
     } else {
@@ -38,7 +38,6 @@ export const MoviePage = () => {
     (movie: any) => movie?.backdrop_path !== null
   );
 
-  console.log("dataDetail", data);
   return (
     <>
       {errors === "" ? (
@@ -49,7 +48,7 @@ export const MoviePage = () => {
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
-              height: "100vh"
+              height: "100%"
             }}>
             <div className='movieDetails'>
               <img
@@ -74,7 +73,7 @@ export const MoviePage = () => {
                 <div
                   style={{
                     display: "flex",
-                    justifyContent: "space-between",
+                    justifyContent: "space-around",
                     maxWidth: "400px",
                     margin: "10px"
                   }}>
@@ -85,7 +84,7 @@ export const MoviePage = () => {
               </div>
             </div>
           </div>
-          <div style={{ paddingTop: "100px" }}>
+          <div style={{ paddingTop: "30px" }}>
             <h2 style={{ color: "#fff", margin: "20px" }}>Compañías</h2>
             <div
               style={{
@@ -122,7 +121,6 @@ export const MoviePage = () => {
                           alt={e.name}
                         />
                       )}
-
                       <p
                         style={{
                           textAlign: "center",
@@ -137,6 +135,8 @@ export const MoviePage = () => {
               )}
             </div>
           </div>
+          <h2 style={{ color: "#fff", margin: "20px" }}>Comentarios</h2>
+          <Comment />
           <h2 style={{ color: "#fff", margin: "20px" }}>Titulos Similares</h2>
           <Card data={result} />
         </div>

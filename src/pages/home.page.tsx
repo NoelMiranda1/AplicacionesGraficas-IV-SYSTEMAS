@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { Banner } from "../components/common/banner.component";
-import { Header } from "../components/header/header.component";
 import { Title } from "../components/common/title.component";
 
 import "slick-carousel/slick/slick.css";
@@ -31,17 +30,15 @@ export const HomePage = ({ data }: any) => {
 
   return (
     <div>
-      <div style={{ marginTop: "7%" }}>
-        {data !== [] ? <Banner data={data} /> : null}
-        <div style={{ marginLeft: "5%", marginRight: "5%" }}>
-          <Title title='Marvel' />
-        </div>
-        <Card data={marvelFilter} />
-        <div style={{ marginLeft: "5%", marginRight: "5%" }}>
-          <Title title='DC' />
-        </div>
-        <Card data={dcFilter} />
+      {data !== [] ? <Banner data={data} /> : null}
+      <div style={{ marginLeft: "5%", marginRight: "5%" }}>
+        <Title title='Marvel' />
       </div>
+      <Card data={marvelFilter} />
+      <div style={{ marginLeft: "5%", marginRight: "5%" }}>
+        <Title title='DC' />
+      </div>
+      <Card data={dcFilter} />
     </div>
   );
 };

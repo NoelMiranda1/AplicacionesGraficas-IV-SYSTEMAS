@@ -38,10 +38,39 @@
   border-radius: 20px;
   color: #fff;
   padding-left: 20px;
+  margin-left: 500px;
+  @media screen and (max-width: 600px) {
+    width: 150px;
+    margin-left: -20px;
+  }
 }
 .burger {
   display: none;
   @media screen and (max-width: 850px) {
     display: inline-block;
+  }
+}
+.navbar-expand-md .navbar-collapse {
+  justify-content: flex-end;
+  @media screen and (max-width: 600px) {
+    text-align: center;
+  }
+}
+.navbar-dark .navbar-nav .nav-link {
+  @media screen and (max-width: 600px) {
+    text-align: center;
+  }
+}
+.bg-dark {
+  background-color: #182131 !important;
+  color: #fff;
+}
+.navbar-toggler-icon {
+  color: #fff;
+}
+.logoStyle {
+  width: "100px";
+  @media screen and (max-width: 600px) {
+    width: 60px;
   }
 }

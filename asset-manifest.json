@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/AplicacionesGraficas-IV-SYSTEMAS/static/css/main.9cd33efc.chunk.css",
-    "main.js": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/main.a472ed9e.chunk.js",
-    "main.js.map": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/main.a472ed9e.chunk.js.map",
+    "main.js": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/main.53f957d1.chunk.js",
+    "main.js.map": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/main.53f957d1.chunk.js.map",
     "runtime-main.js": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/runtime-main.08327003.js",
     "runtime-main.js.map": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/runtime-main.08327003.js.map",
     "static/css/2.01aaf176.chunk.css": "/AplicacionesGraficas-IV-SYSTEMAS/static/css/2.01aaf176.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.01aaf176.chunk.css",
     "static/js/2.88f0f50d.chunk.js",
     "static/css/main.9cd33efc.chunk.css",
-    "static/js/main.a472ed9e.chunk.js"
+    "static/js/main.53f957d1.chunk.js"
   ]
 }

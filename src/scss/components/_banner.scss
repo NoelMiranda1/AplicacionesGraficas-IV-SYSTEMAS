@@ -35,6 +35,13 @@
   color: #fff;
   top: 280px;
   margin-left: 150px;
+  @media screen and (max-width: 600px) {
+    text-align: center;
+    margin-left: 0px;
+    top: 470px;
+    font-size: 20px;
+    max-width: 70%;
+  }
 }
 .titles {
   max-width: 150px;

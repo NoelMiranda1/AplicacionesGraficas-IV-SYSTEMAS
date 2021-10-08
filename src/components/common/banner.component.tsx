@@ -88,7 +88,13 @@ export const Banner = (props: props) => {
                 </div>
               )}
               <div className='titles'>
-                <h1 className='titleMovie'>{movie?.title}</h1>
+                {movie?.title.length > 30 ? (
+                  <h1 className='titleMovie'>
+                    {movie?.title.substr(0, 30)}...
+                  </h1>
+                ) : (
+                  <h1 className='titleMovie'>{movie?.title}</h1>
+                )}
               </div>
             </Link>
           );

@@ -1,25 +1,26 @@
 {
   "files": {
     "main.css": "/AplicacionesGraficas-IV-SYSTEMAS/static/css/main.9cd33efc.chunk.css",
-    "main.js": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/main.17c71a6e.chunk.js",
-    "main.js.map": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/main.17c71a6e.chunk.js.map",
+    "main.js": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/main.85dec86f.chunk.js",
+    "main.js.map": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/main.85dec86f.chunk.js.map",
     "runtime-main.js": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/runtime-main.08327003.js",
     "runtime-main.js.map": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/runtime-main.08327003.js.map",
     "static/css/2.01aaf176.chunk.css": "/AplicacionesGraficas-IV-SYSTEMAS/static/css/2.01aaf176.chunk.css",
-    "static/js/2.8f665f51.chunk.js": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/2.8f665f51.chunk.js",
-    "static/js/2.8f665f51.chunk.js.map": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/2.8f665f51.chunk.js.map",
+    "static/js/2.88f0f50d.chunk.js": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/2.88f0f50d.chunk.js",
+    "static/js/2.88f0f50d.chunk.js.map": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/2.88f0f50d.chunk.js.map",
     "index.html": "/AplicacionesGraficas-IV-SYSTEMAS/index.html",
     "static/css/2.01aaf176.chunk.css.map": "/AplicacionesGraficas-IV-SYSTEMAS/static/css/2.01aaf176.chunk.css.map",
     "static/css/main.9cd33efc.chunk.css.map": "/AplicacionesGraficas-IV-SYSTEMAS/static/css/main.9cd33efc.chunk.css.map",
-    "static/js/2.8f665f51.chunk.js.LICENSE.txt": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/2.8f665f51.chunk.js.LICENSE.txt",
+    "static/js/2.88f0f50d.chunk.js.LICENSE.txt": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/2.88f0f50d.chunk.js.LICENSE.txt",
     "static/media/face.ed1c6925.jpg": "/AplicacionesGraficas-IV-SYSTEMAS/static/media/face.ed1c6925.jpg",
+    "static/media/notFound.87763592.png": "/AplicacionesGraficas-IV-SYSTEMAS/static/media/notFound.87763592.png",
     "static/media/slick-theme.css": "/AplicacionesGraficas-IV-SYSTEMAS/static/media/slick.c94f7671.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.08327003.js",
     "static/css/2.01aaf176.chunk.css",
-    "static/js/2.8f665f51.chunk.js",
+    "static/js/2.88f0f50d.chunk.js",
     "static/css/main.9cd33efc.chunk.css",
-    "static/js/main.17c71a6e.chunk.js"
+    "static/js/main.85dec86f.chunk.js"
   ]
 }

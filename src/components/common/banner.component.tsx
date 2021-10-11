@@ -59,7 +59,7 @@ export const Banner = (props: props) => {
           return (
             <Link
               key={`${movie?.title}+${movie?.id}`}
-              to={`/movie/${movie?.id}`}>
+              to={`/AplicacionesGraficas-IV-SYSTEMAS/movie/${movie?.id}`}>
               {urlPhotoFirst ? (
                 <div className='radius' style={{ borderRadius: "20px" }}>
                   <LazyLoadImage
@@ -68,7 +68,8 @@ export const Banner = (props: props) => {
                       width: "100%",
                       height: "500px",
                       padding: "30px",
-                      marginRight: "100px"
+                      marginRight: "100px",
+                      borderRadius: "20px"
                     }}
                     key={`${movie?.title}+${movie?.id}`}
                     delayTime={300}

@@ -60,7 +60,7 @@ export const Card = (props: props) => {
           return (
             <Link
               key={`${movie?.title}+${movie?.id}`}
-              to={`/movie/${movie?.id}`}>
+              to={`/AplicacionesGraficas-IV-SYSTEMAS/movie/${movie?.id}`}>
               {movie?.poster_path !== null ? (
                 <div className='radius' style={{ borderRadius: "20px" }}>
                   <LazyLoadImage
@@ -68,7 +68,8 @@ export const Card = (props: props) => {
                     style={{
                       width: "100%",
                       height: "350px",
-                      padding: "30px"
+                      padding: "30px",
+                      borderRadius: "20px"
                     }}
                     delayTime={300}
                     src={`https://image.tmdb.org/t/p/w1280/${movie?.poster_path}`}

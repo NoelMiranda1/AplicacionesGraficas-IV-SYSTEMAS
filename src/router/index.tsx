@@ -8,6 +8,7 @@ import {
   Redirect
 } from "react-router-dom";
 import { Header } from "../components/header/header.component";
+import NotFoundPage from "../components/notFound/notFound.component";
 import { HomePage } from "../pages/home.page";
 import { MoviePage } from "../pages/movie.page";
 
@@ -22,13 +23,14 @@ export const Routes = () => {
       <Router>
         <Header setData={getData} />
         <Switch>
-          <Route path='/movie/:id'>
+          <Route path='/AplicacionesGraficas-IV-SYSTEMAS/movie/:id'>
             <MoviePage />
           </Route>
-          <Route path='/home'>
+          <Route path='/AplicacionesGraficas-IV-SYSTEMAS/home'>
             <HomePage data={data} />
           </Route>
-          <Redirect from='/' to='/home' />
+          <Route path='/404' component={NotFoundPage} />
+          <Redirect from='/' to='/AplicacionesGraficas-IV-SYSTEMAS/home' />
         </Switch>
       </Router>
     </>

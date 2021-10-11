@@ -6,6 +6,7 @@ import { Card } from "../components/common/card.component";
 import IMG from "../assets/images/ban.png";
 import API from "../utils/api";
 import { Comment } from "../components/common/comment.componet";
+import { Col, Row } from "reactstrap";
 
 const api = new API();
 
@@ -97,29 +98,33 @@ export const MoviePage = () => {
               {data?.production_companies?.map(
                 (e: { name: string; logo_path: string; id: number }) => {
                   return (
-                    <div
+                    <Row
                       style={{
                         margin: "10px",
                         maxHeight: "200px"
                       }}>
                       {e.logo_path !== null ? (
-                        <img
-                          style={{
-                            width: "100px",
-                            maxHeight: "150px"
-                          }}
-                          src={`https://image.tmdb.org/t/p/w1280/${e?.logo_path}`}
-                          alt={e.name}
-                        />
+                        <Col>
+                          <img
+                            style={{
+                              width: "100px",
+                              maxHeight: "150px"
+                            }}
+                            src={`https://image.tmdb.org/t/p/w1280/${e?.logo_path}`}
+                            alt={e.name}
+                          />
+                        </Col>
                       ) : (
-                        <img
-                          style={{
-                            width: "100px",
-                            maxHeight: "150px"
-                          }}
-                          src={IMG}
-                          alt={e.name}
-                        />
+                        <Col>
+                          <img
+                            style={{
+                              width: "100px",
+                              maxHeight: "150px"
+                            }}
+                            src={IMG}
+                            alt={e.name}
+                          />
+                        </Col>
                       )}
                       <p
                         style={{
@@ -129,7 +134,7 @@ export const MoviePage = () => {
                         }}>
                         {e?.name}
                       </p>
-                    </div>
+                    </Row>
                   );
                 }
               )}

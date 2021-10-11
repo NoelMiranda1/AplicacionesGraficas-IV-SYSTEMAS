@@ -72,7 +72,7 @@ export const Header = (props: props) => {
           paddingLeft: "30px",
           paddingRight: "60px"
         }}>
-        <NavbarBrand href='/'>
+        <NavbarBrand href='/AplicacionesGraficas-IV-SYSTEMAS/home'>
           <img className='logoStyle' src={Logo} alt='logo-app' />
         </NavbarBrand>
         <div>
@@ -96,18 +96,18 @@ export const Header = (props: props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className='mr-auto' navbar>
             <NavItem>
-              <NavLink href='#'>
+              <NavLink href='/AplicacionesGraficas-IV-SYSTEMAS/home'>
                 <AiOutlinePlus color='#fff' size={30} />
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href='#'>
+              <NavLink href='/AplicacionesGraficas-IV-SYSTEMAS/home'>
                 <CgNotifications color='#fff' size={30} />
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href='#'>
-                <Link to='/'>
+              <NavLink href='/AplicacionesGraficas-IV-SYSTEMAS/home'>
+                <Link to='/AplicacionesGraficas-IV-SYSTEMAS/home'>
                   <AiOutlineHome color='#fff' size={30} />
                 </Link>
               </NavLink>

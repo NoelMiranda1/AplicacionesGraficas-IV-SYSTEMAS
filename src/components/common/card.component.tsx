@@ -54,7 +54,7 @@ export const Card = (props: props) => {
   const result = data.filter((movie: any) => movie?.poster_path !== null);
 
   return (
-    <div style={{ paddingLeft: "50px", paddingRight: "50px" }}>
+    <div className='cardImg'>
       <Slider {...settings}>
         {result?.map((movie: any) => {
           return (
@@ -71,6 +71,7 @@ export const Card = (props: props) => {
                       padding: "30px",
                       borderRadius: "20px"
                     }}
+                    className='imgSlider'
                     delayTime={300}
                     src={`https://image.tmdb.org/t/p/w1280/${movie?.poster_path}`}
                   />

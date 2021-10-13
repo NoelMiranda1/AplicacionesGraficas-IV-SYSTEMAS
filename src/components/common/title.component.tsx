@@ -7,7 +7,7 @@ export const Title = (props: props) => {
   const { title } = props;
   return (
     <div>
-      <h2 style={{ color: "#fff" }}>{title}</h2>
+      <h2 style={{ color: "#fff", marginTop: "10px" }}>{title}</h2>
     </div>
   );
 };

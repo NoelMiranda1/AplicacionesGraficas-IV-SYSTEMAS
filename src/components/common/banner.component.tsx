@@ -17,6 +17,8 @@ export const Banner = (props: props) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
+    autoplaySpeed: 500,
+    cssEase: "linear",
     responsive: [
       {
         breakpoint: 1024,
@@ -48,7 +50,9 @@ export const Banner = (props: props) => {
   console.log("result", result);
 
   return (
-    <div style={{ paddingLeft: "30px", paddingRight: "30px" }}>
+    <div
+      style={{ paddingLeft: "30px", paddingRight: "30px" }}
+      className='imageR'>
       <Slider {...settings}>
         {result.length === 0 ? (
           <Alert color='danger'>No se ha encontrado resultados</Alert>
@@ -61,15 +65,15 @@ export const Banner = (props: props) => {
               key={`${movie?.title}+${movie?.id}`}
               to={`/AplicacionesGraficas-IV-SYSTEMAS/movie/${movie?.id}`}>
               {urlPhotoFirst ? (
-                <div style={{ margin: "10px" }}>
+                <div className='radius' style={{ marginRight: "20px" }}>
                   <LazyLoadImage
                     alt={movie?.title}
                     style={{
                       width: "100%",
-                      height: "750px",
-                      borderRadius: "5px",
-                      objectFit: "-moz-initial"
+                      height: "600px",
+                      marginRight: "100px"
                     }}
+                    className='imageR'
                     key={`${movie?.title}+${movie?.id}`}
                     delayTime={300}
                     src={`https://image.tmdb.org/t/p/w1280/${urlPhotoFirst}`}

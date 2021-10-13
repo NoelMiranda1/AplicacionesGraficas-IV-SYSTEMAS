@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/AplicacionesGraficas-IV-SYSTEMAS/static/css/main.9cd33efc.chunk.css",
-    "main.js": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/main.94f9be6c.chunk.js",
-    "main.js.map": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/main.94f9be6c.chunk.js.map",
+    "main.css": "/AplicacionesGraficas-IV-SYSTEMAS/static/css/main.ca51a4ef.chunk.css",
+    "main.js": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/main.f19f19cb.chunk.js",
+    "main.js.map": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/main.f19f19cb.chunk.js.map",
     "runtime-main.js": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/runtime-main.08327003.js",
     "runtime-main.js.map": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/runtime-main.08327003.js.map",
     "static/css/2.01aaf176.chunk.css": "/AplicacionesGraficas-IV-SYSTEMAS/static/css/2.01aaf176.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.220d5ca1.chunk.js.map": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/2.220d5ca1.chunk.js.map",
     "index.html": "/AplicacionesGraficas-IV-SYSTEMAS/index.html",
     "static/css/2.01aaf176.chunk.css.map": "/AplicacionesGraficas-IV-SYSTEMAS/static/css/2.01aaf176.chunk.css.map",
-    "static/css/main.9cd33efc.chunk.css.map": "/AplicacionesGraficas-IV-SYSTEMAS/static/css/main.9cd33efc.chunk.css.map",
+    "static/css/main.ca51a4ef.chunk.css.map": "/AplicacionesGraficas-IV-SYSTEMAS/static/css/main.ca51a4ef.chunk.css.map",
     "static/js/2.220d5ca1.chunk.js.LICENSE.txt": "/AplicacionesGraficas-IV-SYSTEMAS/static/js/2.220d5ca1.chunk.js.LICENSE.txt",
     "static/media/face.ed1c6925.jpg": "/AplicacionesGraficas-IV-SYSTEMAS/static/media/face.ed1c6925.jpg",
     "static/media/notFound.87763592.png": "/AplicacionesGraficas-IV-SYSTEMAS/static/media/notFound.87763592.png",
@@ -20,7 +20,7 @@
     "static/js/runtime-main.08327003.js",
     "static/css/2.01aaf176.chunk.css",
     "static/js/2.220d5ca1.chunk.js",
-    "static/css/main.9cd33efc.chunk.css",
-    "static/js/main.94f9be6c.chunk.js"
+    "static/css/main.ca51a4ef.chunk.css",
+    "static/js/main.f19f19cb.chunk.js"
   ]
 }

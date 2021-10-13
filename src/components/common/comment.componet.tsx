@@ -15,7 +15,8 @@ export const Comment = () => {
                 style={{
                   height: "100px",
                   width: "100px",
-                  borderRadius: "200px"
+                  borderRadius: "400px",
+                  objectFit: "cover"
                 }}
                 src={Face}
                 alt='Face'
@@ -52,7 +53,8 @@ export const Comment = () => {
                 style={{
                   height: "100px",
                   width: "100px",
-                  borderRadius: "200px"
+                  borderRadius: "400px",
+                  objectFit: "cover"
                 }}
                 src={Face}
                 alt='Face'

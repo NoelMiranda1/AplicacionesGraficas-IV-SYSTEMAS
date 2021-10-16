@@ -50,9 +50,7 @@ export const Banner = (props: props) => {
   console.log("result", result);
 
   return (
-    <div
-      style={{ paddingLeft: "30px", paddingRight: "30px" }}
-      className='imageR'>
+    <div className='headeri'>
       <Slider {...settings}>
         {result.length === 0 ? (
           <Alert color='danger'>No se ha encontrado resultados</Alert>
@@ -65,7 +63,7 @@ export const Banner = (props: props) => {
               key={`${movie?.title}+${movie?.id}`}
               to={`/AplicacionesGraficas-IV-SYSTEMAS/movie/${movie?.id}`}>
               {urlPhotoFirst ? (
-                <div className='radius' style={{ marginRight: "20px" }}>
+                <div className='radius'>
                   <LazyLoadImage
                     alt={movie?.title}
                     style={{

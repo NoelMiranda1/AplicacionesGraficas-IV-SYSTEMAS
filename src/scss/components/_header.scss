@@ -11,8 +11,27 @@
   align-items: center;
   background-color: #182131;
   z-index: $z-fixed;
+  @media screen and (max-width: 600px) {
+    padding: 0px 0px;
+    margin: 0px 0px;
+  }
 }
-
+.headeri {
+  padding-left: 30px;
+  padding-right: 30px;
+  @media screen and (max-width: 600px) {
+    padding: 0px 0px !important;
+    margin: 0px 0px !important;
+  }
+}
+.header2 {
+  padding-left: 30px;
+  padding-right: 30px;
+  @media screen and (max-width: 600px) {
+    padding: 3px 3px !important;
+    margin: 0px 0px !important;
+  }
+}
 .navOptions {
   display: flex;
   justify-content: center;

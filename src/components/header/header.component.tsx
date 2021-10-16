@@ -65,13 +65,7 @@ export const Header = (props: props) => {
 
   return (
     <div>
-      <Navbar
-        dark
-        expand='md'
-        style={{
-          paddingLeft: "30px",
-          paddingRight: "60px"
-        }}>
+      <Navbar dark expand='md' className='header2'>
         <NavbarBrand href='/AplicacionesGraficas-IV-SYSTEMAS/home'>
           <img className='logoStyle' src={Logo} alt='logo-app' />
         </NavbarBrand>
